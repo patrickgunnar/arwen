@@ -2,5 +2,51 @@
     "Home": {
         "title": "Arwen",
         "description": "Intelligent Inventory Management"
+    },
+    "System": {
+        "Sidebar": {
+            "Home": {
+                "title": "Home",
+                "path": "/system/home",
+                "hasNested": false,
+                "nested": []
+            },
+            "Inventory": {
+                "title": "Inventory",
+                "path": "/system/inventory",
+                "hasNested": false,
+                "nested": []
+            },
+            "Sales": {
+                "title": "Sales",
+                "path": "/system/sales",
+                "hasNested": false,
+                "nested": []
+            },
+            "Purchases": {
+                "title": "Purchases",
+                "path": "/system/purchases",
+                "hasNested": false,
+                "nested": []
+            },
+            "Integrations": {
+                "title": "Integrations",
+                "path": "/system/integrations",
+                "hasNested": false,
+                "nested": []
+            },
+            "Reports": {
+                "title": "Reports",
+                "path": "/system/reports",
+                "hasNested": false,
+                "nested": []
+            },
+            "Documents": {
+                "title": "Documents",
+                "path": "/system/documents",
+                "hasNested": false,
+                "nested": []
+            }
+        }
     }
 }
