@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Primary White:
+
+Hex: #FFFFFF
+Usage: Backgrounds, main content areas
+Light Gray:
+
+Hex: #F5F5F5
+Usage: Secondary backgrounds, subtle dividers, inactive elements
+Medium Gray:
+
+Hex: #CCCCCC
+Usage: Borders, disabled buttons, less prominent text
+Dark Gray:
+
+Hex: #666666
+Usage: Primary text, icons, active elements
+Charcoal Gray:
+
+Hex: #333333
+Usage: Headers, main buttons, key navigation elements
+Accent Gray:
+
+Hex: #888888
+Usage: Secondary text, hints, non-critical buttons
+
+Background: Use the primary white (#FFFFFF) for the main background to keep the interface clean and uncluttered.
+Cards/Containers: Use the light gray (#F5F5F5) to distinguish sections or containers within the app.
+Borders and Dividers: Use medium gray (#CCCCCC) to create subtle separations between elements without overwhelming the design.
+Text: Use dark gray (#666666) for primary text to ensure readability and charcoal gray (#333333) for headers to create a clear hierarchy.
+Buttons and Interactive Elements: Use charcoal gray (#333333) for primary action buttons and dark gray (#666666) for secondary actions.
+Icons and Subtext: Use accent gray (#888888) for icons, secondary text, and non-critical buttons to provide visual interest without drawing too much attention.
+*/
