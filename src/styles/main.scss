@@ -2,36 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-Primary White:
+:root,
+html,
+body {
+    height: 100%;
+}
 
-Hex: #FFFFFF
-Usage: Backgrounds, main content areas
-Light Gray:
+@layer base {
+    :root {
+        --dark: 0, 0%, 11%;
 
-Hex: #F5F5F5
-Usage: Secondary backgrounds, subtle dividers, inactive elements
-Medium Gray:
+        --background: 0, 0%, 96%;
+        --foreground: 224 71.4% 4.1%;
 
-Hex: #CCCCCC
-Usage: Borders, disabled buttons, less prominent text
-Dark Gray:
+        --card: 0 0% 100%;
+        --card-foreground: 224 71.4% 4.1%;
 
-Hex: #666666
-Usage: Primary text, icons, active elements
-Charcoal Gray:
+        --popover: 0 0% 100%;
+        --popover-foreground: 224 71.4% 4.1%;
 
-Hex: #333333
-Usage: Headers, main buttons, key navigation elements
-Accent Gray:
+        --primary: 0, 0%, 16%;
+        --primary-foreground: 210 20% 98%;
 
-Hex: #888888
-Usage: Secondary text, hints, non-critical buttons
+        --secondary: 43, 74%, 49%;
+        --secondary-foreground: 43, 50%, 24%;
 
-Background: Use the primary white (#FFFFFF) for the main background to keep the interface clean and uncluttered.
-Cards/Containers: Use the light gray (#F5F5F5) to distinguish sections or containers within the app.
-Borders and Dividers: Use medium gray (#CCCCCC) to create subtle separations between elements without overwhelming the design.
-Text: Use dark gray (#666666) for primary text to ensure readability and charcoal gray (#333333) for headers to create a clear hierarchy.
-Buttons and Interactive Elements: Use charcoal gray (#333333) for primary action buttons and dark gray (#666666) for secondary actions.
-Icons and Subtext: Use accent gray (#888888) for icons, secondary text, and non-critical buttons to provide visual interest without drawing too much attention.
-*/
+        --muted: 220 14.3% 95.9%;
+        --muted-foreground: 220 8.9% 46.1%;
+
+        --accent: 220 14.3% 95.9%;
+        --accent-foreground: 220.9 39.3% 11%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 20% 98%;
+
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 224 71.4% 4.1%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 224 71.4% 4.1%;
+        --foreground: 210 20% 98%;
+
+        --card: 224 71.4% 4.1%;
+        --card-foreground: 210 20% 98%;
+
+        --popover: 224 71.4% 4.1%;
+        --popover-foreground: 210 20% 98%;
+
+        --primary: 210 20% 98%;
+        --primary-foreground: 220.9 39.3% 11%;
+
+        --secondary: 215 27.9% 16.9%;
+        --secondary-foreground: 210 20% 98%;
+
+        --muted: 215 27.9% 16.9%;
+        --muted-foreground: 217.9 10.6% 64.9%;
+
+        --accent: 215 27.9% 16.9%;
+        --accent-foreground: 210 20% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 20% 98%;
+
+        --border: 215 27.9% 16.9%;
+        --input: 215 27.9% 16.9%;
+        --ring: 216 12.2% 83.9%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+ml,
+body,
+:root {
+    height: 100%;
+}
