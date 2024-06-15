@@ -39,7 +39,7 @@ export default function SidebarWrapper({
     return (
         <aside
             className={cn(
-                "flex flex-col items-center justify-start bg-primary h-full",
+                "hidden_scrollbar flex flex-col items-center justify-start bg-primary h-full overflow-y-auto",
                 {
                     "w-60": !collapsedState,
                     "w-[70px]": collapsedState,
