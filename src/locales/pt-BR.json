@@ -13,43 +13,122 @@
                 "title": "Início",
                 "path": "/system/home",
                 "hasNested": false,
-                "nested": []
+                "nested": null
             },
             "Inventory": {
                 "title": "Inventário",
                 "path": "/system/inventory",
-                "hasNested": false,
-                "nested": []
+                "hasNested": true,
+                "nested": {
+                    "Items": {
+                        "nestedTitle": "Itens",
+                        "nestedPath": "/system/inventory/items"
+                    },
+                    "Groups": {
+                        "nestedTitle": "Grupos",
+                        "nestedPath": "/system/inventory/groups"
+                    },
+                    "Adjustments": {
+                        "nestedTitle": "Ajustes",
+                        "nestedPath": "/system/inventory/adjustments"
+                    }
+                }
             },
             "Sales": {
                 "title": "Vendas",
                 "path": "/system/sales",
-                "hasNested": false,
-                "nested": []
+                "hasNested": true,
+                "nested": {
+                    "Costumers": {
+                        "nestedTitle": "Clientes",
+                        "nestedPath": "/system/sales/costumers"
+                    },
+                    "Sales Orders": {
+                        "nestedTitle": "Vendas de Produtos",
+                        "nestedPath": "/system/sales/sales-orders"
+                    },
+                    "Packages": {
+                        "nestedTitle": "Pacotes",
+                        "nestedPath": "/system/sales/packages"
+                    },
+                    "Shipments": {
+                        "nestedTitle": "Remessas",
+                        "nestedPath": "/system/sales/shipments"
+                    },
+                    "Invoices": {
+                        "nestedTitle": "Faturas",
+                        "nestedPath": "/system/sales/invoices"
+                    },
+                    "Sales Receipt": {
+                        "nestedTitle": "Recibo de Vendas",
+                        "nestedPath": "/system/sales/sales-receipt"
+                    },
+                    "Payments Received": {
+                        "nestedTitle": "Pagamento Recebidos",
+                        "nestedPath": "/system/sales/payment-received"
+                    },
+                    "Sales Returns": {
+                        "nestedTitle": "Devoluções de Vendas",
+                        "nestedPath": "/system/sales/sales-returns"
+                    },
+                    "Credit Notes": {
+                        "nestedTitle": "Notas de Crédito",
+                        "nestedPath": "/system/sales/credit-notes"
+                    }
+                }
             },
             "Purchases": {
                 "title": "Compras",
                 "path": "/system/purchases",
-                "hasNested": false,
-                "nested": []
+                "hasNested": true,
+                "nested": {
+                    "Vendors": {
+                        "nestedTitle": "Fornecedores",
+                        "nestedPath": "/system/purchases/vendors"
+                    },
+                    "Expenses": {
+                        "nestedTitle": "Despesas",
+                        "nestedPath": "/system/purchases/expenses"
+                    },
+                    "Purchase Orders": {
+                        "nestedTitle": "Pedido de Compras",
+                        "nestedPath": "/system/purchases/purchase-orders"
+                    },
+                    "Purchase Receives": {
+                        "nestedTitle": "Recebimento de Compras",
+                        "nestedPath": "/system/purchases/purchase-receives"
+                    },
+                    "Bills": {
+                        "nestedTitle": "Contas",
+                        "nestedPath": "/system/purchases/bills"
+                    },
+                    "Payment Made": {
+                        "nestedTitle": "Pagamento Realizado",
+                        "nestedPath": "/system/purchases/payment-made"
+                    },
+                    "Vendor Credits": {
+                        "nestedTitle": "Crédito de Fornecedores",
+                        "nestedPath": "/system/purchases/vendor-credits"
+                    }
+                }
             },
             "Integrations": {
                 "title": "Integrações",
                 "path": "/system/integrations",
                 "hasNested": false,
-                "nested": []
+                "nested": null
             },
             "Reports": {
                 "title": "Relatórios",
                 "path": "/system/reports",
                 "hasNested": false,
-                "nested": []
+                "nested": null
             },
             "Documents": {
                 "title": "Documentos",
                 "path": "/system/documents",
                 "hasNested": false,
-                "nested": []
+                "nested": null
             }
         }
     }
