@@ -3,13 +3,31 @@
 import { useSelector } from "react-redux";
 import { Navigation } from "./Navigation";
 import {
+    ArchiveRestore,
     BaggageClaim,
     Blocks,
+    Boxes,
+    Coins,
+    CreditCard,
     Folder,
+    HandCoins,
     Home,
+    LayoutList,
     MessageCircleWarning,
+    NotebookPen,
+    NotepadText,
+    NotepadTextDashed,
+    Package,
     PackageOpen,
+    ReceiptText,
     ShoppingBag,
+    ShoppingCart,
+    Truck,
+    UndoDot,
+    Users,
+    UsersRound,
+    WalletCards,
+    Wrench,
 } from "lucide-react";
 import { StoreType } from "@/src/store";
 import Logo from "@/src/components/logo/Logo";
@@ -39,6 +57,25 @@ export const sidebarIcons: { [key: string]: React.ElementType } = {
     Integrations: Blocks,
     Reports: MessageCircleWarning,
     Documents: Folder,
+    Items: LayoutList,
+    Groups: Boxes,
+    Adjustments: Wrench,
+    Costumers: Users,
+    "Sales Orders": ShoppingCart,
+    Packages: Blocks,
+    Shipments: Truck,
+    Invoices: NotepadText,
+    "Sales Receipt": ReceiptText,
+    "Payments Received": CreditCard,
+    "Sales Returns": UndoDot,
+    "Credit Notes": NotebookPen,
+    Vendors: UsersRound,
+    Expenses: HandCoins,
+    "Purchase Orders": Package,
+    "Purchase Receives": ArchiveRestore,
+    Bills: NotepadTextDashed,
+    "Payment Made": Coins,
+    "Vendor Credits": WalletCards,
 };
 
 type ItemsType = {
@@ -49,13 +86,33 @@ export default function Sidebar() {
     const { collapsed, onCollapsed, onExpand } = useSidebar((state) => state);
 
     const items: ItemsType = useSelector((state: StoreType) => state.language);
-    const sidebar = items?.System?.Sidebar;
+    const sidebar = { ...items?.System?.Sidebar };
     const routes: SystemRoutes[] = [];
 
     for (const [key, value] of Object.entries(sidebar ?? {})) {
+        const nestedRoutes = [];
+        const currentValue: any = {
+            ...(value as any),
+        };
+
+        if (value && currentValue.hasNested) {
+            for (const [nestedKey, nestedValue] of Object.entries(
+                currentValue.nested ?? {}
+            )) {
+                const nestedIcon = sidebarIcons[nestedKey as string];
+                const nestedRoute = {
+                    ...(nestedValue as any),
+                    nestedIcon,
+                };
+
+                nestedRoutes.push(nestedRoute);
+            }
+        }
+
         const icon = sidebarIcons[key];
         const route: SystemRoutes = {
             ...(value as SystemRoutes),
+            nested: nestedRoutes,
             icon,
         };
 
