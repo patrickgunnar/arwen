@@ -1,4 +1,8 @@
 {
+    "Application": {
+        "title": "Arwen",
+        "description": "Intelligent Inventory Management"
+    },
     "Home": {
         "title": "Arwen",
         "description": "Intelligent Inventory Management"

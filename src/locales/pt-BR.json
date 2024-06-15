@@ -1,4 +1,8 @@
 {
+    "Application": {
+        "title": "Arwen",
+        "description": "Gestão Inteligente de Inventário"
+    },
     "Home": {
         "title": "Arwen",
         "description": "Gestão Inteligente de Inventário"
