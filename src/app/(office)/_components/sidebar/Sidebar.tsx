@@ -1,7 +1,7 @@
 "use client";
 
 import { useSelector } from "react-redux";
-import { SidebarItem } from "./SidebarItem";
+import { Navigation } from "./Navigation";
 import {
     BaggageClaim,
     Blocks,
@@ -12,6 +12,10 @@ import {
     ShoppingBag,
 } from "lucide-react";
 import { StoreType } from "@/src/store";
+import Logo from "@/src/components/logo/Logo";
+import SidebarWrapper from "@/src/components/wrappers/SidebarWrapper";
+import { useSidebar } from "@/src/store/hooks/useSidebar";
+import ToggleSidebar from "@/src/components/toggles/ToggleSidebar";
 
 type NestedRoute = {
     nestedTitle: string;
@@ -42,6 +46,8 @@ type ItemsType = {
 };
 
 export default function Sidebar() {
+    const { collapsed, onCollapsed, onExpand } = useSidebar((state) => state);
+
     const items: ItemsType = useSelector((state: StoreType) => state.language);
     const sidebar = items?.System?.Sidebar;
     const routes: SystemRoutes[] = [];
@@ -56,20 +62,34 @@ export default function Sidebar() {
         routes.push(route);
     }
 
+    const toggleSidebar = () => {
+        collapsed ? onExpand() : onCollapsed();
+    };
+
     return (
-        <aside className="flex flex-col items-center justify-start bg-primary h-full w-60">
+        <SidebarWrapper
+            collapsedState={collapsed}
+            onCollapsed={onCollapsed}
+            onExpand={onExpand}
+        >
+            <Logo collapsed={collapsed} />
+            <ToggleSidebar
+                collapsed={collapsed}
+                toggleSidebar={toggleSidebar}
+            />
             <ul className="flex gap-y-2 flex-col items-center justify-start w-full">
                 {routes.map(({ title, path, icon, hasNested, nested }) => (
-                    <SidebarItem
+                    <Navigation
                         key={path}
                         title={title}
                         path={path}
                         icon={icon}
                         hasNested={hasNested}
                         nested={nested}
+                        collapsed={collapsed}
                     />
                 ))}
             </ul>
-        </aside>
+        </SidebarWrapper>
     );
 }
