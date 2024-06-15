@@ -26,7 +26,7 @@ export default function NavigationItem({
             {Icon && <Icon className="h-5 w-5" />}
             {!collapsed && (
                 <span
-                    className={cn("hidden lg:flex flex-1 truncate", {
+                    className={cn("hidden lg:block flex-1 truncate", {
                         "font-medium": isNested,
                     })}
                 >
