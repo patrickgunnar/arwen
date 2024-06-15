@@ -72,12 +72,12 @@ export function Navigation({
                                 variant="transparent"
                                 className={cn("rounded-none w-full", {
                                     "bg-secondary pointer-events-none":
-                                        pathname === `${path}${nestedPath}`,
+                                        pathname === nestedPath,
                                 })}
                             >
                                 <NavigationItem
                                     title={nestedTitle}
-                                    href={`${path}${nestedPath}`}
+                                    href={nestedPath}
                                     icon={nestedIcon}
                                     collapsed={collapsed}
                                     isLink={true}
