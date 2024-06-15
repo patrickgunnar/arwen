@@ -43,6 +43,7 @@ export function Navigation({
                             title={title}
                             icon={icon}
                             collapsed={collapsed}
+                            isOpened={isOpened}
                         />
                     )}
                     {!hasNested && (
@@ -80,6 +81,7 @@ export function Navigation({
                                     icon={nestedIcon}
                                     collapsed={collapsed}
                                     isLink={true}
+                                    isNested
                                 />
                             </Button>
                         </Hint>

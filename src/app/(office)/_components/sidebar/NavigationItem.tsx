@@ -1,4 +1,5 @@
 import { cn } from "@/src/lib/utils";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface NavigationItemProps {
@@ -7,6 +8,8 @@ interface NavigationItemProps {
     icon: any;
     collapsed: boolean;
     isLink?: boolean;
+    isOpened?: boolean;
+    isNested?: boolean;
 }
 
 export default function NavigationItem({
@@ -15,12 +18,20 @@ export default function NavigationItem({
     icon: Icon,
     collapsed,
     isLink,
+    isOpened,
+    isNested,
 }: NavigationItemProps) {
     let content: React.ReactNode = (
         <>
             {Icon && <Icon className="h-5 w-5" />}
             {!collapsed && (
-                <span className="hidden lg:flex flex-1 truncate">{title}</span>
+                <span
+                    className={cn("hidden lg:flex flex-1 truncate", {
+                        "font-medium": isNested,
+                    })}
+                >
+                    {title}
+                </span>
             )}
         </>
     );
@@ -33,6 +44,7 @@ export default function NavigationItem({
                 {
                     "justify-start": !collapsed,
                     "justify-center": collapsed,
+                    "justify-end w-[80%]": isNested && !collapsed,
                 }
             )}
         >
@@ -48,7 +60,12 @@ export default function NavigationItem({
                 }
             )}
         >
-            {content}
+            {content}{" "}
+            {isOpened ? (
+                <ArrowDown className="h-3 w-3" />
+            ) : (
+                <ArrowRight className="h-3 w-3" />
+            )}
         </div>
     );
 }
