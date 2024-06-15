@@ -18,6 +18,16 @@ module.exports = {
         },
         extend: {
             colors: {
+                "primary-with-transparency": {
+                    DEFAULT: "hsla(var(--primary-with-transparency))",
+                    foreground:
+                        "hsla(var(--primary-foreground-with-transparency))",
+                },
+                "secondary-with-transparency": {
+                    DEFAULT: "hsla(var(--secondary-with-transparency))",
+                    foreground:
+                        "hsla(var(--secondary-foreground-with-transparency))",
+                },
                 dark: "hsl(var(--dark))",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
