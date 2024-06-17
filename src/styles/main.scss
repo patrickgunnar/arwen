@@ -5,7 +5,10 @@
 :root,
 html,
 body {
+    color: black;
     height: 100%;
+
+    overflow-x: hidden;
 }
 
 .hidden_scrollbar {
@@ -22,7 +25,9 @@ body {
         --dark: 0, 0%, 11%;
 
         --background: 0, 0%, 96%;
-        --foreground: 224 71.4% 4.1%;
+        /*--foreground: 0, 0%, 33%;*/
+        --foreground: 48, 93%, 40%;
+        --yellow-01: 48, 96%, 45%;
 
         --card: 0 0% 100%;
         --card-foreground: 224 71.4% 4.1%;
@@ -31,7 +36,7 @@ body {
         --popover-foreground: 224 71.4% 4.1%;
 
         --primary: 0, 0%, 16%;
-        --primary-foreground: 0, 0%, 33%;
+        --primary-foreground: 0, 0%, 25%;
 
         --primary-with-transparency: 0, 0%, 16%, 0.7;
         --primary-foreground-with-transparency: 0, 0%, 33%, 0.7;
@@ -96,9 +101,4 @@ body {
     body {
         @apply bg-background text-foreground;
     }
-}
-ml,
-body,
-:root {
-    height: 100%;
 }
