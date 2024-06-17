@@ -22,6 +22,8 @@ const buttonVariants = cva(
                 yellow: "box-border bg-secondary font-semibold text-white hover:bg-secondary-foreground p-4 rounded-none",
                 transparent:
                     "box-border bg-transparent font-semibold text-white hover:bg-secondary-foreground p-4",
+                transparentYellow:
+                    "box-border bg-transparent font-semibold text-white hover:bg-yellow01 p-4",
             },
             size: {
                 default: "h-10 px-4 py-2",
