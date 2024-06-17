@@ -9,7 +9,8 @@ import {
 
 interface HintProps {
     children: React.ReactNode;
-    label: string;
+    label?: string;
+    textElement?: React.ElementType;
     asChild?: boolean;
     side?: "top" | "bottom" | "left" | "right";
     align?: "start" | "center" | "end";
@@ -18,6 +19,7 @@ interface HintProps {
 export default function Hint({
     children,
     label,
+    textElement: TextElement,
     align,
     side,
     asChild,
@@ -31,7 +33,10 @@ export default function Hint({
                     side={side}
                     align={align}
                 >
-                    <p className="font-medium text-xs">{label}</p>
+                    <p className="font-medium text-xs">
+                        {label && <>{label}</>}
+                    </p>
+                    {TextElement && <TextElement />}
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
