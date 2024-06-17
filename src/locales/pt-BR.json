@@ -5,7 +5,15 @@
     },
     "Home": {
         "title": "Arwen",
-        "description": "Gestão Inteligente de Inventário"
+        "description": "Gestão Inteligente de Inventário",
+        "history": "Histórico",
+        "search": "Pesquisar em",
+        "advancedSearch": "Pesquisa Avançada",
+        "searchModalTitle": "Pesquisa Avançada",
+        "searchModalCancelLabel": "Cancelar",
+        "searchModalLabel": "Pesquisar",
+        "historyModalTitle": "Histórico",
+        "historyModalCancelLabel": "Fechar"
     },
     "System": {
         "Sidebar": {
