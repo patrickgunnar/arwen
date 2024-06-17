@@ -1,3 +1,5 @@
+import ContentTable from "./_components/ContentTable";
+import Navbar from "./_components/navbar/Navbar";
 import Sidebar from "./_components/sidebar/Sidebar";
 
 export default function OfficeLayout({
@@ -6,9 +8,12 @@ export default function OfficeLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="flex bg-background h-full">
+        <div className="flex bg-background text-inherit h-full w-full overflow-hidden">
             <Sidebar />
-            <main className="flex-1 h-full">{children}</main>
+            <ContentTable>
+                <Navbar />
+                <main className="box-border p-2">{children}</main>
+            </ContentTable>
         </div>
     );
 }
