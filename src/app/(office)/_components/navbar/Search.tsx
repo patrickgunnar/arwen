@@ -31,7 +31,7 @@ export default function Search() {
                     size="default"
                     variant="transparentYellow"
                     onClick={() => setIsAdvanceSearch((prev) => !prev)}
-                    className="flex gap-x-1 items-center justify-center bg-yellow01 border border-r-0 border-secondary rounded-r-none hover:bg-secondary"
+                    className="flex gap-x-1 items-center justify-center bg-white/85 border border-r-0 border-secondary rounded-r-none"
                 >
                     <SearchIcon className="text-secondary-foreground h-4 w-4" />
                     <ChevronDown className="text-secondary-foreground h-4 w-4" />
@@ -40,7 +40,7 @@ export default function Search() {
                     value={value}
                     onChange={(ev) => setValue(ev.target.value)}
                     placeholder={`Search in /${searchIn}`}
-                    className="font-light text-white bg-yellow01 placeholder:text-secondary-foreground border border-l-0 border-secondary pr-10 rounded-l-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0"
+                    className="font-light text-black bg-white/85 placeholder:text-secondary-foreground border border-l-0 border-secondary pr-10 rounded-l-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0"
                 />
                 {value && (
                     <div className="absolute flex items-center justify-center right-3 h-full">
