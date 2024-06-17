@@ -31,7 +31,7 @@ import {
 } from "lucide-react";
 import { StoreType } from "@/src/store";
 import Logo from "@/src/components/logo/Logo";
-import SidebarWrapper from "@/src/components/wrappers/SidebarWrapper";
+import SidebarWrapper from "./SidebarWrapper";
 import { useSidebar } from "@/src/store/hooks/useSidebar";
 import ToggleSidebar from "@/src/components/toggles/ToggleSidebar";
 
