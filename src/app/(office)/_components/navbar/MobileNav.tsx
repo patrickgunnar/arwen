@@ -11,7 +11,7 @@ export default function MobileNav() {
         <div>
             <div className="flex items-center justify-center ml-4 mr-1">
                 <Button
-                    variant="transparentGray"
+                    variant="transparentYellow"
                     onClick={() => setIsOpened((prev) => !prev)}
                 >
                     <AlignJustify className="h-5 w-5" />
