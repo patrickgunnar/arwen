@@ -3,7 +3,7 @@ import Label from "../label/Label";
 import Link from "next/link";
 import { cn } from "@/src/lib/utils";
 
-export default function Logo({ collapsed }: { collapsed: boolean }) {
+export default function Logo({ collapsed }: { collapsed?: boolean }) {
     return (
         <Link href="/system/home">
             <div className="flex gap-y-2 flex-col items-center justify-center text-white px-0 pt-8 pb-4 w-full">
@@ -22,13 +22,12 @@ export default function Logo({ collapsed }: { collapsed: boolean }) {
                         </p>
                     </div>
                 )}
-                <div className={cn(
-                    "flex gap-x-0",
-                    {
+                <div
+                    className={cn("flex gap-x-0", {
                         "mt-2": !collapsed,
-                        "mt-8": collapsed
-                    }
-                )}>
+                        "mt-8": collapsed,
+                    })}
+                >
                     <Dot className="h-6 w-6" />
                     {!collapsed && (
                         <>
