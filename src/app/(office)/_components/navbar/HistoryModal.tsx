@@ -1,9 +1,7 @@
 "use client";
 
-import { ElementRef, useRef } from "react";
 import {
     Dialog,
-    DialogClose,
     DialogContent,
     DialogHeader,
     DialogTitle,
@@ -14,15 +12,9 @@ import { HistoryIcon } from "lucide-react";
 import { useTranslations } from "@/src/hooks/useTranslations";
 
 export default function HistoryModal() {
-    const closeRef = useRef<ElementRef<"button">>(null);
-
     const title = useTranslations({
         page: "Home",
         label: "historyModalTitle",
-    });
-    const cancelLabel = useTranslations({
-        page: "Home",
-        label: "historyModalCancelLabel",
     });
 
     return (
@@ -37,11 +29,6 @@ export default function HistoryModal() {
                     <DialogTitle>{title}</DialogTitle>
                 </DialogHeader>
                 <div className="h-72">{/* TODO: Advanced history */}</div>
-                <DialogClose ref={closeRef} asChild>
-                    <Button variant="yellow" className="rounded-md">
-                        {cancelLabel}
-                    </Button>
-                </DialogClose>
             </DialogContent>
         </Dialog>
     );
