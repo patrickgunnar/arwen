@@ -1,3 +1,23 @@
+"use client";
+
+import Hint from "@/src/components/hit/Hint";
+import { useTranslations } from "@/src/hooks/useTranslations";
+import OrganizationsModal from "./OrganizationsModal";
+
 export default function Organizations() {
-    return <div>Organizations</div>;
+    const organizationName = "Arwen's org";
+    const label = useTranslations({
+        page: "Home",
+        label: "organizations",
+    });
+
+    return (
+        <div>
+            <Hint align="end" side="bottom" label={label} asChild>
+                <div>
+                    <OrganizationsModal organizationName={organizationName} />
+                </div>
+            </Hint>
+        </div>
+    );
 }
