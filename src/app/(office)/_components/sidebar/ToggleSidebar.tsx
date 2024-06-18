@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslations } from "@/src/hooks/useTranslations";
-import Hint from "../hit/Hint";
-import { Button } from "../ui/button";
+import Hint from "../../../../components/hit/Hint";
+import { Button } from "../../../../components/ui/button";
 import { MoveLeft, MoveRight } from "lucide-react";
 
 export default function ToggleSidebar({
