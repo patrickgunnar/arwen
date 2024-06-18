@@ -17,7 +17,16 @@
         "searchModalCancelLabel": "Cancel",
         "searchModalLabel": "Search",
         "historyModalTitle": "History",
-        "historyModalCancelLabel": "Close"
+        "user": "User",
+        "settings": "Settings",
+        "notifications": "Notifications",
+        "refer&earn": "Refer and Earn",
+        "create": "Create",
+        "apps": "Apps",
+        "appsModalTitle": "All Apps",
+        "notificationsModalTitle": "Notifications",
+        "referAndEarnModalTitle": "Refer And Earn",
+        "createModalTitle": "Quick Create"
     },
     "System": {
         "Sidebar": {
