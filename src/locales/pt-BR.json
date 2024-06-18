@@ -3,6 +3,10 @@
         "title": "Arwen",
         "description": "Gestão Inteligente de Inventário"
     },
+    "Sidebar": {
+        "expand": "Expandir",
+        "collapse": "Recolher"
+    },
     "Home": {
         "title": "Arwen",
         "description": "Gestão Inteligente de Inventário",
