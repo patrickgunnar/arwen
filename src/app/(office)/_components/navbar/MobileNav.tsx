@@ -14,7 +14,7 @@ export default function MobileNav() {
                     variant="transparentYellow"
                     onClick={() => setIsOpened((prev) => !prev)}
                 >
-                    <AlignJustify className="h-5 w-5" />
+                    <AlignJustify className="text-secondary-foreground h-5 w-5" />
                 </Button>
             </div>
             {isOpened && (

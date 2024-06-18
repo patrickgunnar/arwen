@@ -21,7 +21,7 @@ export default function Navbar() {
                 </div>
                 <Search />
             </Container>
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
                 <Container>
                     <Organizations />
                     <div className="mx-1">|</div>
@@ -35,7 +35,7 @@ export default function Navbar() {
                     </Container>
                 </Container>
             </div>
-            <div className="lg:hidden">
+            <div className="xl:hidden">
                 <MobileNav />
             </div>
         </div>
