@@ -10,12 +10,14 @@ interface Lang {
 export function useTranslations({
     page,
     label,
+    nested,
 }: {
     page: string;
     label: string;
+    nested?: string;
 }) {
     const lang: Lang = useSelector((state: StoreType) => state.language);
-    const text = lang[page][label] ?? "None";
+    const text = nested ? lang[page][nested][label] : lang[page][label];
 
-    return text;
+    return text ?? "None";
 }
