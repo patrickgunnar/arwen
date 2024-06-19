@@ -7,8 +7,9 @@ import OrganizationsModal from "./OrganizationsModal";
 export default function Organizations() {
     const organizationName = "Arwen's org";
     const label = useTranslations({
-        page: "Home",
+        page: "System",
         label: "organizations",
+        nested: "Navbar",
     });
 
     return (

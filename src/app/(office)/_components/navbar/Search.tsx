@@ -12,12 +12,14 @@ export default function Search() {
     const pathname = usePathname();
     const pathnameArr = pathname.split("/").filter((path) => path.length > 0);
     const label = useTranslations({
-        page: "Home",
+        page: "System",
         label: "search",
+        nested: "Navbar",
     });
     const histLabel = useTranslations({
-        page: "Home",
+        page: "System",
         label: "advancedSearch",
+        nested: "Navbar",
     });
 
     const [value, setValue] = useState<string>("");

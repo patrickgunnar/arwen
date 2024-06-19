@@ -6,8 +6,9 @@ import AppsModal from "./AppsModal";
 
 export default function Apps() {
     const label = useTranslations({
-        page: "Home",
+        page: "System",
         label: "apps",
+        nested: "Navbar",
     });
 
     return (

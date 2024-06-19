@@ -6,8 +6,9 @@ import NotificationsModal from "./NotificationsModal";
 
 export default function Notifications() {
     const label = useTranslations({
-        page: "Home",
+        page: "System",
         label: "notifications",
+        nested: "Navbar",
     });
 
     return (

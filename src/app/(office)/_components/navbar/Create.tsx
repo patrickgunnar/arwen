@@ -6,8 +6,9 @@ import CreateModal from "./CreateModal";
 
 export default function Create() {
     const label = useTranslations({
-        page: "Home",
+        page: "System",
         label: "create",
+        nested: "Navbar",
     });
 
     return (

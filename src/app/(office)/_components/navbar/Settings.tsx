@@ -8,8 +8,9 @@ import Link from "next/link";
 
 export default function Settings() {
     const label = useTranslations({
-        page: "Home",
+        page: "System",
         label: "settings",
+        nested: "Navbar",
     });
 
     return (

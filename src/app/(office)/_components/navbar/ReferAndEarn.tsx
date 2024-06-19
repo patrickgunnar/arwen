@@ -6,8 +6,9 @@ import ReferAndEarnModal from "./ReferAndEarnModal";
 
 export default function ReferAndEarn() {
     const label = useTranslations({
-        page: "Home",
+        page: "System",
         label: "refer&earn",
+        nested: "Navbar",
     });
 
     return (

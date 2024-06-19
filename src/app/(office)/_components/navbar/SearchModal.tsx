@@ -17,16 +17,19 @@ export default function SearchModal() {
     const closeRef = useRef<ElementRef<"button">>(null);
 
     const title = useTranslations({
-        page: "Home",
+        page: "System",
         label: "searchModalTitle",
+        nested: "Navbar",
     });
     const cancelLabel = useTranslations({
-        page: "Home",
+        page: "System",
         label: "searchModalCancelLabel",
+        nested: "Navbar",
     });
     const searchLabel = useTranslations({
-        page: "Home",
+        page: "System",
         label: "searchModalLabel",
+        nested: "Navbar",
     });
 
     return (

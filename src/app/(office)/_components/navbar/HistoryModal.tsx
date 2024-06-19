@@ -13,8 +13,9 @@ import { useTranslations } from "@/src/hooks/useTranslations";
 
 export default function HistoryModal() {
     const title = useTranslations({
-        page: "Home",
+        page: "System",
         label: "historyModalTitle",
+        nested: "Navbar",
     });
 
     return (

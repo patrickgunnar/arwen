@@ -9,26 +9,34 @@ import {
 } from "@/src/components/ui/dialog";
 import { Button } from "@/src/components/ui/button";
 import { useTranslations } from "@/src/hooks/useTranslations";
+import { cn } from "@/src/lib/utils";
 
 export default function OrganizationsModal({
     organizationName,
+    isMobileNav,
 }: {
     organizationName: string;
+    isMobileNav?: boolean;
 }) {
     const title = useTranslations({
-        page: "Home",
+        page: "System",
         label: "organizationsModalTitle",
+        nested: "Navbar",
     });
 
     return (
         <Dialog>
             <DialogTrigger asChild>
                 <Button
-                    size="sm"
+                    size={isMobileNav ? "lg" : "sm"}
                     variant="transparentYellow"
-                    className="text-secondary-foreground"
+                    className={cn("text-secondary-foreground", {
+                        "text-white w-full": isMobileNav,
+                    })}
                 >
-                    <span className="truncate block max-w-36">{organizationName}</span>
+                    <span className="truncate block max-w-36">
+                        {organizationName}
+                    </span>
                 </Button>
             </DialogTrigger>
             <DialogContent className="bg-primary border border-gray-900 text-white">
