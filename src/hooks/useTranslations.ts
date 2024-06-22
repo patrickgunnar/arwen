@@ -11,7 +11,7 @@ interface Lang {
 export function useTranslations({
     page,
     label,
-    nested,
+    nested = "",
 }: {
     page: string;
     label: string;
@@ -20,7 +20,7 @@ export function useTranslations({
     const lang: Lang = useSelector((state: StoreType) => state.language);
 
     return useMemo(() => {
-        if (!page && !label) return "No label";
+        if (!page || !label) return "No label";
 
         const text: string = nested
             ? lang[page]?.[nested]?.[label]
