@@ -1,6 +1,7 @@
 "use client";
 
 import { StoreType } from "@/src/store";
+import { useMemo } from "react";
 import { useSelector } from "react-redux";
 
 interface Lang {
@@ -17,7 +18,14 @@ export function useTranslations({
     nested?: string;
 }) {
     const lang: Lang = useSelector((state: StoreType) => state.language);
-    const text = nested ? lang[page][nested][label] : lang[page][label];
 
-    return text ?? "None";
+    return useMemo(() => {
+        if (!page && !label) return "No label";
+
+        const text: string = nested
+            ? lang[page]?.[nested]?.[label]
+            : lang[page]?.[label];
+
+        return text ?? "Label not found";
+    }, [label, lang, nested, page]);
 }
