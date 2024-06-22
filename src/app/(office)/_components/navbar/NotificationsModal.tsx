@@ -8,7 +8,7 @@ import {
     DialogTrigger,
 } from "@/src/components/ui/dialog";
 import { Button } from "@/src/components/ui/button";
-import { Bell } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useTranslations } from "@/src/hooks/useTranslations";
 import { cn } from "@/src/lib/utils";
 
@@ -34,7 +34,7 @@ export default function NotificationsModal({
                             buttonTitle,
                     })}
                 >
-                    <Bell className="h-5 w-5" />
+                    <Mail className="h-5 w-5" />
                     {buttonTitle && <p>{buttonTitle}</p>}
                 </Button>
             </DialogTrigger>
