@@ -22,7 +22,7 @@ export default function HistoryModal() {
         <Dialog>
             <DialogTrigger asChild>
                 <Button variant="transparentYellow" className="relative">
-                    <HistoryIcon className="text-secondary-foreground h-6 w-6" />
+                    <HistoryIcon className="text-secondary-foreground h-5 w-5" />
                 </Button>
             </DialogTrigger>
             <DialogContent className="bg-primary border border-gray-900 text-white">

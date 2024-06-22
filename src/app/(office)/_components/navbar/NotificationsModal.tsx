@@ -34,7 +34,7 @@ export default function NotificationsModal({
                             buttonTitle,
                     })}
                 >
-                    <Bell className="h-6 w-6" />
+                    <Bell className="h-5 w-5" />
                     {buttonTitle && <p>{buttonTitle}</p>}
                 </Button>
             </DialogTrigger>

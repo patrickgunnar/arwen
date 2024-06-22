@@ -34,7 +34,7 @@ export default function ReferAndEarnModal({
                             buttonTitle,
                     })}
                 >
-                    <Speech className="h-6 w-6" />
+                    <Speech className="h-5 w-5" />
                     {buttonTitle && <p>{buttonTitle}</p>}
                 </Button>
             </DialogTrigger>

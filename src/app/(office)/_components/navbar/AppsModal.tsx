@@ -30,7 +30,7 @@ export default function AppsModal({ buttonTitle }: { buttonTitle?: string }) {
                             buttonTitle,
                     })}
                 >
-                    <Grip className="h-6 w-6" />
+                    <Grip className="h-5 w-5" />
                     {buttonTitle && <p>{buttonTitle}</p>}
                 </Button>
             </DialogTrigger>

@@ -25,7 +25,7 @@ export default function Settings() {
                         href="/system/settings"
                         className="flex items-center justify-center h-full w-full"
                     >
-                        <Cog className="h-6 w-6" />
+                        <Cog className="h-5 w-5" />
                     </Link>
                 </Button>
             </Hint>

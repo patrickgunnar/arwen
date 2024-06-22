@@ -30,7 +30,7 @@ export default function CreateModal({ buttonTitle }: { buttonTitle?: string }) {
                             buttonTitle,
                     })}
                 >
-                    <SquarePlus className="h-6 w-6" />
+                    <SquarePlus className="h-5 w-5" />
                     {buttonTitle && <p>{buttonTitle}</p>}
                 </Button>
             </DialogTrigger>
