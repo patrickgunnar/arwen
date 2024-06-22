@@ -1,20 +1,19 @@
 "use client";
 
-import { StoreType } from "@/src/store";
-import { useSelector } from "react-redux";
-
-interface Lang {
-    [key: string]: any;
-}
+import { useTranslations } from "@/src/hooks/useTranslations";
 
 interface LabelProps {
     name: string;
     value: string;
+    nested?: string;
 }
 
-export default function Label({ name, value }: LabelProps) {
-    const lang: Lang = useSelector((state: StoreType) => state.language);
-    const label = lang[name][value] ?? "None";
+export default function Label({ name, value, nested = "" }: LabelProps) {
+    const label = useTranslations({
+        page: name,
+        label: value,
+        nested,
+    });
 
     return <>{label}</>;
 }
