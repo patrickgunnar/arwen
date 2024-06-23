@@ -8,7 +8,7 @@ import {
     DialogTrigger,
 } from "@/src/components/ui/dialog";
 import { Button } from "@/src/components/ui/button";
-import { SquarePlus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { useTranslations } from "@/src/hooks/useTranslations";
 import { cn } from "@/src/lib/utils";
 
@@ -24,13 +24,23 @@ export default function CreateModal({ buttonTitle }: { buttonTitle?: string }) {
             <DialogTrigger asChild>
                 <Button
                     size={buttonTitle ? "lg" : "sm"}
-                    variant="transparentYellow"
-                    className={cn("text-secondary-foreground", {
+                    variant="link"
+                    className={cn("", {
                         "flex items-center justify-start gap-x-2 text-white w-full":
                             buttonTitle,
                     })}
                 >
-                    <SquarePlus className="h-5 w-5" />
+                    <div
+                        className={cn(
+                            "flex items-center justify-center rounded-md p-[2px]",
+                            {
+                                "bg-darkened text-foreground": !buttonTitle,
+                                "bg-white text-primary": buttonTitle,
+                            }
+                        )}
+                    >
+                        <Plus className="h-5 w-5" />
+                    </div>
                     {buttonTitle && <p>{buttonTitle}</p>}
                 </Button>
             </DialogTrigger>

@@ -67,8 +67,8 @@ export default function MobileNavModal() {
         <Dialog>
             <DialogClose ref={closeRef}></DialogClose>
             <DialogTrigger asChild>
-                <Button variant="transparentYellow">
-                    <AlignJustify className="text-secondary-foreground h-5 w-5" />
+                <Button variant="link">
+                    <AlignJustify className="h-5 w-5" />
                 </Button>
             </DialogTrigger>
             <DialogContent className="bg-primary border border-gray-900 text-white xl:hidden">
@@ -82,7 +82,7 @@ export default function MobileNavModal() {
                         <NotificationsModal buttonTitle={notificationsTitle} />
                         <Button
                             size="lg"
-                            variant="transparentYellow"
+                            variant="link"
                             className="flex items-center justify-center text-white w-full"
                         >
                             <Link

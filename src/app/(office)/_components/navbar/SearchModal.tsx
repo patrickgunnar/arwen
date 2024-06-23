@@ -42,8 +42,8 @@ export default function SearchModal() {
                     onClick={() => {}}
                     className="flex gap-x-1 items-center justify-center bg-white/85 border border-r-0 border-secondary rounded-r-none"
                 >
-                    <SearchIcon className="text-secondary-foreground h-4 w-4" />
-                    <ChevronDown className="text-secondary-foreground h-4 w-4" />
+                    <SearchIcon className="text-darkened h-4 w-4" />
+                    <ChevronDown className="text-darkened h-4 w-4" />
                 </Button>
             </DialogTrigger>
             <DialogContent className="bg-primary border border-gray-900 text-white">

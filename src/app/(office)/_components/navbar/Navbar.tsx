@@ -14,7 +14,7 @@ import Apps from "./Apps";
 
 export default function Navbar() {
     return (
-        <div className="flex items-center justify-between bg-foreground shadow-sm shadow-secondary-foreground text-secondary-foreground p-1 h-14 overflow-hidden">
+        <div className="flex items-center justify-between bg-foreground shadow-sm shadow-darkened text-darkened p-1 h-14 overflow-hidden">
             <Container>
                 <div className="hidden md:block">
                     <History />
@@ -24,9 +24,9 @@ export default function Navbar() {
             <div className="hidden xl:block">
                 <Container>
                     <Organizations />
-                    <div className="mx-1">|</div>
+                    <Create />
+                    <div className="mx-1 cursor-default">|</div>
                     <Container>
-                        <Create />
                         <ReferAndEarn />
                         <Notifications />
                         <Settings />

@@ -45,12 +45,12 @@ export default function Search() {
                 value={value}
                 onChange={(ev) => setValue(ev.target.value)}
                 placeholder={`${label} /${searchIn}`}
-                className="font-light text-black bg-white/85 placeholder:text-secondary-foreground border border-l-0 border-secondary pr-10 rounded-l-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0"
+                className="font-light text-black bg-white/85 border border-l-0 border-secondary pr-10 rounded-l-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0"
             />
             {value && (
                 <div className="absolute flex items-center justify-center right-3 h-full">
                     <X
-                        className="text-secondary-foreground cursor-pointer transition h-4 w-6 hover:opacity-75"
+                        className="text-darkened cursor-pointer transition h-4 w-6 hover:opacity-75"
                         onClick={onClear}
                     />
                 </div>

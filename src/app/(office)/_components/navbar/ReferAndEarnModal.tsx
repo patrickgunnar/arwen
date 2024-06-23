@@ -28,8 +28,8 @@ export default function ReferAndEarnModal({
             <DialogTrigger asChild>
                 <Button
                     size={buttonTitle ? "lg" : "sm"}
-                    variant="transparentYellow"
-                    className={cn("text-secondary-foreground", {
+                    variant="link"
+                    className={cn("", {
                         "flex items-center justify-start gap-x-2 text-white w-full":
                             buttonTitle,
                     })}

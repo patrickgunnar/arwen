@@ -29,8 +29,8 @@ export default function OrganizationsModal({
             <DialogTrigger asChild>
                 <Button
                     size={isMobileNav ? "lg" : "sm"}
-                    variant="transparentYellow"
-                    className={cn("text-secondary-foreground", {
+                    variant="link"
+                    className={cn("", {
                         "text-white w-full": isMobileNav,
                     })}
                 >

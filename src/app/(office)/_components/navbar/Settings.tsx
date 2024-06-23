@@ -18,8 +18,7 @@ export default function Settings() {
             <Hint align="end" side="bottom" label={label} asChild>
                 <Button
                     size="sm"
-                    variant="transparentYellow"
-                    className="text-secondary-foreground"
+                    variant="link"
                 >
                     <Link
                         href="/system/settings"
