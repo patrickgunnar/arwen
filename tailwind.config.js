@@ -18,6 +18,7 @@ module.exports = {
         },
         extend: {
             colors: {
+                "darkened": "hsl(var(--darkened))",
                 yellow01: "hsl(var(--yellow-01))",
                 "primary-with-transparency": {
                     DEFAULT: "hsla(var(--primary-with-transparency))",
