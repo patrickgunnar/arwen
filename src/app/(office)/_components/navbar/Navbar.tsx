@@ -14,7 +14,7 @@ import Apps from "./Apps";
 
 export default function Navbar() {
     return (
-        <div className="flex items-center justify-between bg-foreground shadow-sm shadow-darkened text-darkened p-1 h-14 overflow-hidden">
+        <div className="flex items-center justify-between bg-foreground shadow-sm shadow-gray-400/80 text-darkened p-1 h-14 overflow-hidden">
             <Container>
                 <div className="hidden md:block">
                     <History />
