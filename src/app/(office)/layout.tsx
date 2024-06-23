@@ -1,4 +1,5 @@
 import ContentTable from "./_components/ContentTable";
+import MainContent from "./_components/MainContent";
 import Navbar from "./_components/navbar/Navbar";
 import Sidebar from "./_components/sidebar/Sidebar";
 
@@ -12,7 +13,7 @@ export default function OfficeLayout({
             <Sidebar />
             <ContentTable>
                 <Navbar />
-                <main className="box-border p-2">{children}</main>
+                <MainContent>{children}</MainContent>
             </ContentTable>
         </div>
     );
