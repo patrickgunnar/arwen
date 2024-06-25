@@ -1,5 +1,5 @@
 import HomeNavigation from "./_components/HomeNavigation";
-import HomeHeader from "../../_components/HomeHeader";
+import HomeHeader from "./_components/HomeHeader";
 
 export default function HomeLayout({ children }: { children: string }) {
     const orgsName = "Arwen's org";
