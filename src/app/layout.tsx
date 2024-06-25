@@ -32,7 +32,16 @@ export default async function RootLayout({
     const translations = await getTranslations(preferLang ?? locale);
 
     return (
-        <ClerkProvider>
+        <ClerkProvider
+            signInUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}
+            signUpUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}
+            signInFallbackRedirectUrl={
+                process.env.NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL
+            }
+            signUpFallbackRedirectUrl={
+                process.env.NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL
+            }
+        >
             <html lang={locale}>
                 <body className={inter.className}>
                     <ReduxProvider>
