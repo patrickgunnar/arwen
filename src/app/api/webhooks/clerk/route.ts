@@ -1,6 +1,7 @@
 import { Webhook } from "svix";
 import { headers } from "next/headers";
 import { WebhookEvent } from "@clerk/nextjs/server";
+import { db } from "@/src/lib/db";
 
 export async function POST(req: Request) {
     const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET;
@@ -45,15 +46,63 @@ export async function POST(req: Request) {
     }
 
     // gets the id and type
-    //const { id } = evt.data;
     const eventType = evt.type;
 
-    //console.log(`Webhook ID: ${id},\nWebhook TYPE: ${eventType}`);
-    //console.log("Webhook body: ", body);
-
     // sync user with db
+    if (eventType === "user.created") {
+        const firstName = payload.data.first_name;
+        const lastName = payload.data.last_name;
+        const organizationName = `${firstName} ${lastName}`;
+
+        await db.user.create({
+            data: {
+                externalUserId: payload.data.id,
+                username: payload.data.username,
+                imageUrl: payload.data.image_url,
+                email: payload.data.email_addresses[0].email_address,
+                organizationName,
+                firstName,
+                lastName,
+            },
+        });
+    }
+
     // sync user update
+    if (eventType === "user.updated") {
+        const currentUser = await db.user.findUnique({
+            where: {
+                externalUserId: payload.data.id,
+            },
+        });
+
+        if (!currentUser) {
+            return new Response("User not found", {
+                status: 404,
+            });
+        }
+
+        await db.user.update({
+            where: {
+                externalUserId: payload.data.id,
+            },
+            data: {
+                username: payload.data.username,
+                imageUrl: payload.data.image_url,
+                email: payload.data.email_addresses[0].email_address,
+                firstName: payload.data.first_name,
+                lastName: payload.data.last_name,
+            },
+        });
+    }
+
     // sync user deletation
+    if (eventType === "user.deleted") {
+        await db.user.delete({
+            where: {
+                externalUserId: payload.data.id,
+            },
+        });
+    }
 
     return new Response("", { status: 200 });
 }
