@@ -1,7 +1,8 @@
+import * as React from "react";
 import Label from "@/src/components/label/Label";
 import { LayoutDashboard } from "lucide-react";
 
-export default function HomeHeader({
+function HomeHeader({
     username,
     orgsName,
 }: {
@@ -27,3 +28,5 @@ export default function HomeHeader({
         </div>
     );
 }
+
+export default React.memo(HomeHeader);
