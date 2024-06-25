@@ -35,18 +35,20 @@ function HomeNavigation() {
     }
 
     return (
-        <ul className="hidden lg:flex gap-x-6 z-50 h-10 w-full">
-            {routes.map(({ title, path, icon }) => {
-                return (
-                    <NavigationItem
-                        key={path}
-                        title={title}
-                        path={path}
-                        icon={icon}
-                    />
-                );
-            })}
-        </ul>
+        <nav className="hidden lg:block z-50 h-10 w-full">
+            <ul className="flex gap-x-6 h-full w-full">
+                {routes.map(({ title, path, icon }) => {
+                    return (
+                        <NavigationItem
+                            key={path}
+                            title={title}
+                            path={path}
+                            icon={icon}
+                        />
+                    );
+                })}
+            </ul>
+        </nav>
     );
 }
 
