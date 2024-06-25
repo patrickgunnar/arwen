@@ -63,7 +63,7 @@ export function Navigation({
                 <ul className="flex gap-y-2 flex-col w-full">
                     {nested.map(({ nestedTitle, nestedPath, nestedIcon }) => (
                         <Hint
-                            key={nestedPath}
+                            key={`${nestedTitle}-${nestedPath}`}
                             label={nestedTitle}
                             align="end"
                             side="right"

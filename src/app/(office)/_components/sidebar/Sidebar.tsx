@@ -136,7 +136,7 @@ function Sidebar() {
             <ul className="flex gap-y-2 flex-col items-center justify-start w-full">
                 {routes.map(({ title, path, icon, hasNested, nested, href }) => (
                     <Navigation
-                        key={href ?? path}
+                        key={`${title}-${path}`}
                         title={title}
                         path={path}
                         icon={icon}
