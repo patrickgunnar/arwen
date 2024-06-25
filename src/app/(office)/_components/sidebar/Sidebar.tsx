@@ -61,7 +61,7 @@ export const sidebarIcons: { [key: string]: React.ElementType } = {
     Items: LayoutList,
     Groups: Boxes,
     Adjustments: Wrench,
-    Costumers: Users,
+    Customers: Users,
     "Sales Orders": ShoppingCart,
     Packages: Blocks,
     Shipments: Truck,
