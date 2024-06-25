@@ -38,6 +38,7 @@
             "Home": {
                 "title": "Início",
                 "path": "/system/home",
+                "href": "/system/home/overview",
                 "hasNested": false,
                 "nested": null
             },
