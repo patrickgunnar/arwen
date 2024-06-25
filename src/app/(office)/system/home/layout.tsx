@@ -15,7 +15,7 @@ export default function HomeLayout({ children }: { children: string }) {
                     {/* TODO: Home Navigation Mobile */}
                 </div>
             </div>
-            <div className="mt-10">{children}</div>
+            <div className="mt-2">{children}</div>
         </>
     );
 }
