@@ -156,6 +156,27 @@
                 "hasNested": false,
                 "nested": null
             }
+        },
+        "Home Description": {
+            "pre-title": "Olá"
+        },
+        "Home": {
+            "Overview": {
+                "title": "Visão Geral",
+                "path": "/system/home/overview"
+            },
+            "Getting Started": {
+                "title": "Primeiros Passos",
+                "path": "/system/home/getting-started"
+            },
+            "Announcements": {
+                "title": "Anúncios",
+                "path": "/system/home/announcements"
+            },
+            "Recent Updates": {
+                "title": "Atualizações Recentes",
+                "path": "/system/home/recent-updates"
+            }
         }
     }
 }
