@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { UserButton } from "@clerk/nextjs";
 import Container from "./Container";
 import History from "./History";
@@ -12,7 +13,7 @@ import ReferAndEarn from "./ReferAndEarn";
 import Create from "./Create";
 import Apps from "./Apps";
 
-export default function Navbar() {
+function Navbar() {
     return (
         <div className="flex items-center justify-between bg-foreground shadow-sm shadow-gray-400/80 text-darkened p-1 h-14 overflow-hidden">
             <Container>
@@ -41,3 +42,5 @@ export default function Navbar() {
         </div>
     );
 }
+
+export default React.memo(Navbar);

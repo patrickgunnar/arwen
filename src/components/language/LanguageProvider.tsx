@@ -1,9 +1,10 @@
 "use client";
 
+import * as React from "react";
 import { Language, setLanguage } from "@/src/store/slices/language";
 import { useDispatch } from "react-redux";
 
-export default function LanguageProvider({
+function LanguageProvider({
     children,
     lang,
 }: {
@@ -12,7 +13,11 @@ export default function LanguageProvider({
 }) {
     const dispatch = useDispatch();
 
-    dispatch(setLanguage(lang));
+    React.useEffect(() => {
+        dispatch(setLanguage(lang));
+    }, [dispatch, lang]);
 
     return <>{children}</>;
 }
+
+export default React.memo(LanguageProvider);

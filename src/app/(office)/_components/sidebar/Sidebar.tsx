@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { Navigation } from "./Navigation";
 import {
     ArchiveRestore,
@@ -78,7 +79,7 @@ export const sidebarIcons: { [key: string]: React.ElementType } = {
     "Vendor Credits": WalletCards,
 };
 
-export default function Sidebar() {
+function Sidebar() {
     const { collapsed, onCollapsed, onExpand } = useSidebar((state) => state);
 
     const sidebar = useTranslations({
@@ -135,7 +136,7 @@ export default function Sidebar() {
             <ul className="flex gap-y-2 flex-col items-center justify-start w-full">
                 {routes.map(({ title, path, icon, hasNested, nested, href }) => (
                     <Navigation
-                        key={path}
+                        key={href ?? path}
                         title={title}
                         path={path}
                         icon={icon}
@@ -149,3 +150,5 @@ export default function Sidebar() {
         </SidebarWrapper>
     );
 }
+
+export default React.memo(Sidebar);
