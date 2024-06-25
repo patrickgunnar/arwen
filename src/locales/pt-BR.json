@@ -66,9 +66,9 @@
                 "path": "/system/sales",
                 "hasNested": true,
                 "nested": {
-                    "Costumers": {
+                    "Customers": {
                         "nestedTitle": "Clientes",
-                        "nestedPath": "/system/sales/costumers"
+                        "nestedPath": "/system/sales/customers"
                     },
                     "Sales Orders": {
                         "nestedTitle": "Vendas de Produtos",
