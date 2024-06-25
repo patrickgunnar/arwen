@@ -17,7 +17,7 @@ export function NavigationItem({ title, path, icon: Icon }: HomeRoutes) {
                     "border-b-2 rounded-none h-full w-full hover:bg-transparent hover:border-yellow-400",
                     {
                         "border-transparent": pathname !== path,
-                        "border-yellow-500": pathname === path,
+                        "border-yellow-500 pointer-events-none": pathname === path,
                     }
                 )}
             >
