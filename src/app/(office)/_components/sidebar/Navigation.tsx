@@ -34,7 +34,7 @@ export function Navigation({
                         "bg-secondary-foreground":
                             pathname.includes(path) && hasNested,
                         "bg-secondary pointer-events-none":
-                            pathname === path && !hasNested,
+                            (pathname === path || pathname.includes(path)) && !hasNested,
                     })}
                     onClick={handleOpenClose}
                 >
@@ -72,7 +72,7 @@ export function Navigation({
                                 variant="transparent"
                                 className={cn("rounded-none w-full", {
                                     "bg-secondary pointer-events-none":
-                                        pathname === nestedPath,
+                                        pathname === nestedPath || pathname.includes(nestedPath),
                                 })}
                             >
                                 <NavigationItem
