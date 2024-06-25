@@ -5,7 +5,7 @@ import { cn } from "@/src/lib/utils";
 
 export default function Logo({ collapsed }: { collapsed?: boolean }) {
     return (
-        <Link href="/system/home">
+        <Link href="/system/home/overview">
             <div className="flex gap-y-2 flex-col items-center justify-center text-white px-0 pt-8 pb-4 w-full">
                 <div className="flex gap-x-2 items-center justify-center w-full">
                     <Orbit className="h-7 w-7" />
