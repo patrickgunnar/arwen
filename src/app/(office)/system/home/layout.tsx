@@ -10,6 +10,9 @@ export default function HomeLayout({ children }: { children: string }) {
             <div className="flex flex-col gap-y-8 bg-white rounded-t-md rounded-b-none p-2 pb-0 w-full">
                 <HomeHeader username={username} orgsName={orgsName} />
                 <HomeNavigation />
+                <div className="lg:hidden h-10 w-full">
+                    {/* TODO: Home Navigation Mobile */}
+                </div>
             </div>
             <div className="mt-10">{children}</div>
         </>
