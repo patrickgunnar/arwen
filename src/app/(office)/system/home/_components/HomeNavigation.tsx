@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { useTranslations } from "@/src/hooks/useTranslations";
 import { LayoutList, ListStart, Presentation, Rss } from "lucide-react";
 import { NavigationItem } from "./NavigationItem";
@@ -17,7 +18,7 @@ const homeIcons: { [key: string]: React.ElementType } = {
     "Recent Updates": Rss,
 };
 
-export default function HomeNavigation() {
+function HomeNavigation() {
     const routes: HomeRoutes[] = [];
     const translations = useTranslations({
         page: "System",
@@ -48,3 +49,5 @@ export default function HomeNavigation() {
         </ul>
     );
 }
+
+export default React.memo(HomeNavigation);
