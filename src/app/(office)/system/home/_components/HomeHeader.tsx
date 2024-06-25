@@ -10,7 +10,7 @@ function HomeHeader({
     orgsName: string;
 }) {
     return (
-        <div className="flex gap-x-2 items-center justify-start pt-8 px-2 w-full">
+        <div className="flex gap-x-2 items-center justify-start pt-8 px-2 z-50 w-full">
             <div className="flex items-center justify-center bg-white border border-gray-400 text-muted-foreground rounded-md p-2">
                 <LayoutDashboard className="h-9 w-9" />
             </div>
