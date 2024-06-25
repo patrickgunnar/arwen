@@ -1,6 +1,5 @@
 "use client";
 
-import { useSelector } from "react-redux";
 import { Navigation } from "./Navigation";
 import {
     ArchiveRestore,
@@ -29,11 +28,11 @@ import {
     WalletCards,
     Wrench,
 } from "lucide-react";
-import { StoreType } from "@/src/store";
 import Logo from "@/src/components/logo/Logo";
 import SidebarWrapper from "./SidebarWrapper";
 import { useSidebar } from "@/src/store/hooks/useSidebar";
 import ToggleSidebar from "./ToggleSidebar";
+import { useTranslations } from "@/src/hooks/useTranslations";
 
 type NestedRoute = {
     nestedTitle: string;
@@ -78,15 +77,13 @@ export const sidebarIcons: { [key: string]: React.ElementType } = {
     "Vendor Credits": WalletCards,
 };
 
-type ItemsType = {
-    [key: string]: any;
-};
-
 export default function Sidebar() {
     const { collapsed, onCollapsed, onExpand } = useSidebar((state) => state);
 
-    const items: ItemsType = useSelector((state: StoreType) => state.language);
-    const sidebar = { ...items?.System?.Sidebar };
+    const sidebar = useTranslations({
+        page: "System",
+        label: "Sidebar",
+    });
     const routes: SystemRoutes[] = [];
 
     for (const [key, value] of Object.entries(sidebar ?? {})) {
@@ -111,7 +108,7 @@ export default function Sidebar() {
 
         const icon = sidebarIcons[key];
         const route: SystemRoutes = {
-            ...(value as SystemRoutes),
+            ...(value as any),
             nested: nestedRoutes,
             icon,
         };
