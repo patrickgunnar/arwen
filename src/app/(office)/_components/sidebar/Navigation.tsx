@@ -15,6 +15,7 @@ export function Navigation({
     hasNested,
     nested,
     collapsed,
+    href,
 }: SystemRoutes & { collapsed: boolean }) {
     const pathname = usePathname();
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -34,7 +35,8 @@ export function Navigation({
                         "bg-secondary-foreground":
                             pathname.includes(path) && hasNested,
                         "bg-secondary pointer-events-none":
-                            (pathname === path || pathname.includes(path)) && !hasNested,
+                            (pathname === path || pathname.includes(path)) &&
+                            !hasNested,
                     })}
                     onClick={handleOpenClose}
                 >
@@ -49,7 +51,7 @@ export function Navigation({
                     {!hasNested && (
                         <NavigationItem
                             title={title}
-                            href={path}
+                            href={href ?? path}
                             icon={icon}
                             collapsed={collapsed}
                             isLink={true}
@@ -72,7 +74,8 @@ export function Navigation({
                                 variant="transparent"
                                 className={cn("rounded-none w-full", {
                                     "bg-secondary pointer-events-none":
-                                        pathname === nestedPath || pathname.includes(nestedPath),
+                                        pathname === nestedPath ||
+                                        pathname.includes(nestedPath),
                                 })}
                             >
                                 <NavigationItem

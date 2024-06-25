@@ -46,6 +46,7 @@ export interface SystemRoutes {
     icon: React.ElementType | null;
     hasNested: boolean;
     nested: NestedRoute[];
+    href?: string;
 }
 
 export const sidebarIcons: { [key: string]: React.ElementType } = {
@@ -132,7 +133,7 @@ export default function Sidebar() {
                 toggleSidebar={toggleSidebar}
             />
             <ul className="flex gap-y-2 flex-col items-center justify-start w-full">
-                {routes.map(({ title, path, icon, hasNested, nested }) => (
+                {routes.map(({ title, path, icon, hasNested, nested, href }) => (
                     <Navigation
                         key={path}
                         title={title}
@@ -141,6 +142,7 @@ export default function Sidebar() {
                         hasNested={hasNested}
                         nested={nested}
                         collapsed={collapsed}
+                        href={href}
                     />
                 ))}
             </ul>
