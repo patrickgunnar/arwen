@@ -18,7 +18,7 @@ import { NavigationItem } from "./NavigationItem";
 
 export default function HomeMobileNavigation() {
     const closeRef = useRef<ElementRef<"button">>(null);
-    const matches = useMediaQuery("(min-width: 1280px)");
+    const matches = useMediaQuery("(min-width: 1024px)");
 
     const routes: HomeRoutes[] = [];
     const translations = useTranslations({
