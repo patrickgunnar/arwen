@@ -5,7 +5,7 @@ import { UserButton } from "@clerk/nextjs";
 import Container from "./Container";
 import History from "./History";
 import MobileNav from "./MobileNav";
-import Organizations from "./Organizations";
+import Organization from "./Organization";
 import Search from "./Search";
 import Settings from "./Settings";
 import Notifications from "./Notifications";
@@ -24,7 +24,7 @@ function Navbar() {
             </Container>
             <div className="hidden xl:block">
                 <Container>
-                    <Organizations />
+                    <Organization />
                     <Create />
                     <div className="mx-1 cursor-default">|</div>
                     <Container>
