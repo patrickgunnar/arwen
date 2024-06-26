@@ -24,12 +24,13 @@ export function NavigationItem({
             <Button
                 variant="ghost"
                 className={cn(
-                    "border-b-2 rounded-none h-full w-full hover:bg-transparent hover:border-yellow-400",
+                    "rounded-none h-full w-full hover:bg-transparent hover:border-yellow-400",
                     {
                         "border-transparent": pathname !== path,
                         "border-yellow-500 pointer-events-none":
                             pathname === path,
-                        "hover:text-white": isMobileNav,
+                        "border-b-2": !isMobileNav,
+                        "hover:text-white border-l-2": isMobileNav,
                     }
                 )}
             >
