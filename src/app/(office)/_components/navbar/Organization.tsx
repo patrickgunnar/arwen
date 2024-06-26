@@ -13,7 +13,7 @@ export default function Organization({
     const { organizationName } = useUser();
     const label = useTranslations({
         page: "System",
-        label: "organizations",
+        label: "organization",
         nested: "Navbar",
     });
 
