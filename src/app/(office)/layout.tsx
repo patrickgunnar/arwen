@@ -11,16 +11,27 @@ export default async function OfficeLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const self = await getSelf();
-    const user = { ...self };
+    const self = { ...(await getSelf()) };
+    let user: UserType | null = null;
 
-    if (user) {
-        delete user.externalUserId;
-        delete user.id;
+    if (self) {
+        const { id, externalUserId, ...data } = self;
+
+        user = {
+            ...data,
+            createdAt:
+                self.createdAt instanceof Date
+                    ? self.createdAt.toISOString()
+                    : self.createdAt,
+            updatedAt:
+                self.updatedAt instanceof Date
+                    ? self.updatedAt.toISOString()
+                    : self.updatedAt,
+        } as UserType;
     }
 
     return (
-        <UserProvider user={user as UserType}>
+        <UserProvider user={user}>
             <div className="flex bg-background text-inherit h-full w-full overflow-hidden">
                 <Sidebar />
                 <ContentTable>
