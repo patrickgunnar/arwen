@@ -19,12 +19,13 @@ import Link from "next/link";
 import OrganizationsModal from "./OrganizationsModal";
 import { useMediaQuery } from "usehooks-ts";
 import { ElementRef, useEffect, useRef } from "react";
+import { useUser } from "@/src/hooks/useUser";
 
 export default function MobileNavModal() {
     const closeRef = useRef<ElementRef<"button">>(null);
     const matches = useMediaQuery("(min-width: 1280px)");
+    const { organizationName } = useUser();
 
-    const organizationName = "Arwen's org";
     const title = useTranslations({
         page: "System",
         label: "mobileNav",
