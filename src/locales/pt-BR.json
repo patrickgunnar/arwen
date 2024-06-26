@@ -159,7 +159,8 @@
             }
         },
         "Home Description": {
-            "pre-title": "Olá"
+            "pre-title": "Olá",
+            "homeMobileNav": "Opções da Página Inicial"
         },
         "Home": {
             "Overview": {

@@ -159,7 +159,8 @@
             }
         },
         "Home Description": {
-            "pre-title": "Hello"
+            "pre-title": "Hello",
+            "homeMobileNav": "Home Page Options"
         },
         "Home": {
             "Overview": {
