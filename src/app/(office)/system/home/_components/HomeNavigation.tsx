@@ -11,7 +11,7 @@ export interface HomeRoutes {
     icon?: React.ElementType;
 }
 
-const homeIcons: { [key: string]: React.ElementType } = {
+export const homeIcons: { [key: string]: React.ElementType } = {
     Overview: LayoutList,
     "Getting Started": ListStart,
     Announcements: Presentation,
