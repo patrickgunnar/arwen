@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import language from "./slices/language";
+import user from "./slices/user";
 
 const store = configureStore({
     reducer: {
         language,
+        user,
     },
 });
 
