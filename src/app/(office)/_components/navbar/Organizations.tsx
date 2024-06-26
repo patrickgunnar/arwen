@@ -3,9 +3,10 @@
 import Hint from "@/src/components/hit/Hint";
 import { useTranslations } from "@/src/hooks/useTranslations";
 import OrganizationsModal from "./OrganizationsModal";
+import { useUser } from "@/src/hooks/useUser";
 
 export default function Organizations() {
-    const organizationName = "Arwen's org";
+    const { organizationName } = useUser();
     const label = useTranslations({
         page: "System",
         label: "organizations",

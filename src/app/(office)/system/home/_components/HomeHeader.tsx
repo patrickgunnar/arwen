@@ -1,14 +1,13 @@
+"use client";
+
 import * as React from "react";
 import Label from "@/src/components/label/Label";
 import { LayoutDashboard } from "lucide-react";
+import { useUser } from "@/src/hooks/useUser";
 
-function HomeHeader({
-    username,
-    orgsName,
-}: {
-    username: string;
-    orgsName: string;
-}) {
+function HomeHeader() {
+    const { firstName, organizationName } = useUser();
+
     return (
         <div className="flex gap-x-2 items-center justify-start pt-8 px-2 z-50 w-full">
             <div className="flex items-center justify-center bg-white border border-gray-400 text-muted-foreground rounded-md p-2">
@@ -21,9 +20,11 @@ function HomeHeader({
                         nested="Home Description"
                         value="pre-title"
                     />
-                    , {username}
+                    , {firstName}
                 </h1>
-                <p className="text-sm text-muted-foreground">{orgsName}</p>
+                <p className="text-sm text-muted-foreground">
+                    {organizationName}
+                </p>
             </div>
         </div>
     );
