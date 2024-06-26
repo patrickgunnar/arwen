@@ -7,8 +7,8 @@ export type UserType = {
     firstName: string;
     lastName: string;
     imageUrl: string;
-    createdAt: Date;
-    updatedAt: Date;
+    createdAt: string;
+    updatedAt: string;
 };
 
 const initialState: UserType = {
@@ -18,8 +18,8 @@ const initialState: UserType = {
     firstName: "",
     lastName: "",
     imageUrl: "",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    createdAt: "",
+    updatedAt: "",
 };
 
 const user = createSlice({
