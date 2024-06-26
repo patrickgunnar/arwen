@@ -16,15 +16,13 @@ import ReferAndEarnModal from "./ReferAndEarnModal";
 import NotificationsModal from "./NotificationsModal";
 import AppsModal from "./AppsModal";
 import Link from "next/link";
-import OrganizationsModal from "./OrganizationsModal";
 import { useMediaQuery } from "usehooks-ts";
 import { ElementRef, useEffect, useRef } from "react";
-import { useUser } from "@/src/hooks/useUser";
+import Organization from "./Organization";
 
 export default function MobileNavModal() {
     const closeRef = useRef<ElementRef<"button">>(null);
     const matches = useMediaQuery("(min-width: 1280px)");
-    const { organizationName } = useUser();
 
     const title = useTranslations({
         page: "System",
@@ -99,11 +97,8 @@ export default function MobileNavModal() {
                         </Button>
                         <AppsModal buttonTitle={appsTitle} />
                     </div>
-                    <div className="mt-6 w-full">
-                        <OrganizationsModal
-                            organizationName={organizationName}
-                            isMobileNav
-                        />
+                    <div className="flex items-center justify-center mt-6 w-full">
+                        <Organization isMobileNav />
                     </div>
                 </div>
             </DialogContent>
